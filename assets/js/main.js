@@ -18,7 +18,7 @@ function initNavbar() {
 
   if (!navbar) return;
 
-  // Scroll behaviour
+  // Scroll behavior
   window.addEventListener('scroll', function () {
     if (window.scrollY > 60) {
       navbar.classList.add('scrolled');
