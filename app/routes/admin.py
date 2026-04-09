@@ -25,11 +25,14 @@ def login():
             )
             login_user(user, remember=True)
             flash("Selamat datang kembali!", "success")
-            next_page = request.args.get("next")
-            # Validate next_page to prevent open redirect
-            if next_page and urlsplit(next_page).netloc == "":
-                return redirect(next_page)
-            return redirect(url_for("admin.dashboard"))
+            next_page = request.args.get("next", "")
+            # Only allow relative paths (no scheme or netloc) to prevent open redirect
+            parsed = urlsplit(next_page)
+            if next_page and not parsed.scheme and not parsed.netloc and next_page.startswith("/"):
+                safe_next = next_page
+            else:
+                safe_next = url_for("admin.dashboard")
+            return redirect(safe_next)
         else:
             flash("Email atau password salah, atau layanan tidak tersedia.", "danger")
     return render_template("admin/login.html", form=form)
