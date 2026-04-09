@@ -5,6 +5,6 @@ WTForms==3.1.2
 python-dotenv==1.0.1
 supabase==2.4.6
 email-validator==2.1.1
-gunicorn==21.2.0
-Pillow==10.3.0
+gunicorn==22.0.0
+Pillow==12.1.1
 python-slugify==8.0.4
