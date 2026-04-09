@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pemerintah Kabupaten Grobogan</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Bootstrap Icons -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="top-bar d-none d-md-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center py-1">
+        <div class="d-flex align-items-center gap-3 small">
+          <span><i class="bi bi-calendar3 me-1"></i><span id="currentDate"></span></span>
+          <span><i class="bi bi-thermometer-half me-1"></i>Selamat Datang di Website Resmi Kabupaten Grobogan</span>
+        </div>
+        <div class="d-flex align-items-center gap-3 small">
+          <a href="#" class="text-white text-decoration-none"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white text-decoration-none"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white text-decoration-none"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="text-white text-decoration-none"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNavbar">
+    <div class="container">
+      <!-- Logo & Brand -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+        <div class="logo-circle">
+          <img src="assets/images/logo-grobogan.png" alt="Logo Grobogan" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+          <div class="logo-placeholder" style="display:none">
+            <i class="bi bi-shield-fill"></i>
+          </div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Kabupaten Grobogan</span>
+          <span class="brand-sub">Pemerintah Daerah</span>
+        </div>
+      </a>
+
+      <!-- Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Items -->
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">
+              <i class="bi bi-house-door me-1"></i>Beranda
+            </a>
+          </li>
+
+          <!-- Profil Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="bi bi-building me-1"></i>Profil
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg-end shadow">
+              <li><a class="dropdown-item" href="#profil"><i class="bi bi-info-circle me-2"></i>Tentang Grobogan</a></li>
+              <li><a class="dropdown-item" href="#profil"><i class="bi bi-person-badge me-2"></i>Bupati &amp; Wakil Bupati</a></li>
+              <li><a class="dropdown-item" href="#profil"><i class="bi bi-diagram-3 me-2"></i>Struktur Organisasi</a></li>
+              <li><a class="dropdown-item" href="#profil"><i class="bi bi-geo-alt me-2"></i>Visi &amp; Misi</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#profil"><i class="bi bi-map me-2"></i>Geografi Wilayah</a></li>
+            </ul>
+          </li>
+
+          <!-- Informasi & Layanan Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="bi bi-grid me-1"></i>Informasi &amp; Layanan
+            </a>
+            <ul class="dropdown-menu dropdown-menu-lg-end shadow">
+              <li><a class="dropdown-item" href="#layanan"><i class="bi bi-people me-2"></i>Layanan Kependudukan</a></li>
+              <li><a class="dropdown-item" href="#layanan"><i class="bi bi-heart-pulse me-2"></i>Layanan Kesehatan</a></li>
+              <li><a class="dropdown-item" href="#layanan"><i class="bi bi-cloud-lightning me-2"></i>Informasi Kebencanaan</a></li>
+              <li><a class="dropdown-item" href="#layanan"><i class="bi bi-camera me-2"></i>Informasi Pariwisata</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#berita"><i class="bi bi-newspaper me-2"></i>Berita &amp; Pengumuman</a></li>
+            </ul>
+          </li>
+
+          <!-- Pengaduan -->
+          <li class="nav-item">
+            <a class="nav-link" href="#pengaduan">
+              <i class="bi bi-chat-square-text me-1"></i>Pengaduan
+            </a>
+          </li>
+
+          <!-- Kontak -->
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">
+              <i class="bi bi-telephone me-1"></i>Kontak
+            </a>
+          </li>
+
+          <!-- CTA Button -->
+          <li class="nav-item ms-lg-2">
+            <a href="#layanan" class="btn btn-danger btn-sm px-3 fw-semibold">
+              <i class="bi bi-grid-fill me-1"></i>Akses Layanan
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO CAROUSEL ===== -->
+  <section id="home">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="hero-slide hero-slide-1">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+              <div class="row align-items-center min-vh-hero">
+                <div class="col-lg-7 text-white" data-aos="fade-right">
+                  <div class="badge-hero mb-3">
+                    <i class="bi bi-star-fill me-1"></i>Program Unggulan 2025
+                  </div>
+                  <h1 class="hero-title">Grobogan Maju, <br><span class="text-warning">Sejahtera &amp; Berdaya</span></h1>
+                  <p class="hero-desc">
+                    Pemerintah Kabupaten Grobogan berkomitmen memberikan pelayanan publik terbaik demi kesejahteraan seluruh lapisan masyarakat Grobogan.
+                  </p>
+                  <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="#layanan" class="btn btn-danger btn-hero">
+                      <i class="bi bi-grid-fill me-2"></i>Akses Layanan
+                    </a>
+                    <a href="#profil" class="btn btn-outline-light btn-hero">
+                      <i class="bi bi-info-circle me-2"></i>Pelajari Lebih
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="hero-slide hero-slide-2">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+              <div class="row align-items-center min-vh-hero">
+                <div class="col-lg-7 text-white">
+                  <div class="badge-hero mb-3">
+                    <i class="bi bi-hospital me-1"></i>Layanan Kesehatan
+                  </div>
+                  <h1 class="hero-title">Kesehatan Masyarakat <br><span class="text-warning">Prioritas Utama</span></h1>
+                  <p class="hero-desc">
+                    Program Jaminan Kesehatan Daerah hadir untuk memastikan seluruh warga Grobogan mendapat akses layanan kesehatan yang layak dan berkualitas.
+                  </p>
+                  <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="#layanan" class="btn btn-danger btn-hero">
+                      <i class="bi bi-heart-pulse me-2"></i>Layanan Kesehatan
+                    </a>
+                    <a href="#berita" class="btn btn-outline-light btn-hero">
+                      <i class="bi bi-newspaper me-2"></i>Baca Berita
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="hero-slide hero-slide-3">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+              <div class="row align-items-center min-vh-hero">
+                <div class="col-lg-7 text-white">
+                  <div class="badge-hero mb-3">
+                    <i class="bi bi-camera me-1"></i>Pariwisata Grobogan
+                  </div>
+                  <h1 class="hero-title">Jelajahi Keindahan <br><span class="text-warning">Bumi Pertiwi</span></h1>
+                  <p class="hero-desc">
+                    Grobogan menyimpan kekayaan alam dan budaya yang memukau. Bledug Kuwu, Waduk Kedung Ombo, dan berbagai destinasi wisata menanti kunjungan Anda.
+                  </p>
+                  <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="#layanan" class="btn btn-danger btn-hero">
+                      <i class="bi bi-map me-2"></i>Wisata Grobogan
+                    </a>
+                    <a href="#berita" class="btn btn-outline-light btn-hero">
+                      <i class="bi bi-camera-fill me-2"></i>Galeri Foto
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== STATISTICS STRIP ===== -->
+  <section class="stats-strip py-4">
+    <div class="container">
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">2,013</div>
+            <div class="stat-label">Km² Luas Wilayah</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">1,4 Jt</div>
+            <div class="stat-label">Jiwa Penduduk</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">19</div>
+            <div class="stat-label">Kecamatan</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">280</div>
+            <div class="stat-label">Desa / Kelurahan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROFIL SECTION ===== -->
+  <section id="profil" class="section-padding bg-light">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="section-badge mb-3">Tentang Kami</div>
+          <h2 class="section-title">Kabupaten Grobogan</h2>
+          <p class="text-muted mb-4">
+            Kabupaten Grobogan adalah salah satu kabupaten di Provinsi Jawa Tengah, Indonesia. Ibu kota kabupaten ini adalah Purwodadi. Grobogan berbatasan dengan Kabupaten Blora di timur, Kabupaten Pati dan Demak di utara, Kabupaten Semarang dan Boyolali di barat, serta Kabupaten Ngawi dan Sragen di selatan.
+          </p>
+          <p class="text-muted mb-4">
+            Dengan luas wilayah 2.013,90 km² dan populasi sekitar 1,4 juta jiwa, Grobogan merupakan salah satu kabupaten dengan luas terbesar di Jawa Tengah yang kaya akan potensi pertanian, pariwisata, dan budaya lokal.
+          </p>
+          <div class="row g-3 mb-4">
+            <div class="col-6">
+              <div class="info-card-sm">
+                <i class="bi bi-person-badge text-primary fs-4 mb-2"></i>
+                <h6 class="fw-bold mb-1">Bupati</h6>
+                <p class="small text-muted mb-0">Sri Sumarni, S.H., M.M.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="info-card-sm">
+                <i class="bi bi-person-badge text-primary fs-4 mb-2"></i>
+                <h6 class="fw-bold mb-1">Wakil Bupati</h6>
+                <p class="small text-muted mb-0">Dt. H. Sugiyatno</p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex gap-3">
+            <a href="#" class="btn btn-primary">
+              <i class="bi bi-book me-2"></i>Profil Lengkap
+            </a>
+            <a href="#layanan" class="btn btn-outline-primary">
+              <i class="bi bi-grid me-2"></i>Layanan Kami
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="visi-misi-card">
+                <div class="vm-icon bg-primary">
+                  <i class="bi bi-eye-fill text-white fs-4"></i>
+                </div>
+                <h5 class="fw-bold mt-3">Visi</h5>
+                <p class="small text-muted">
+                  "Terwujudnya Masyarakat Grobogan yang Sejahtera Secara Utuh dan Menyeluruh"
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="visi-misi-card">
+                <div class="vm-icon bg-danger">
+                  <i class="bi bi-bullseye text-white fs-4"></i>
+                </div>
+                <h5 class="fw-bold mt-3">Misi</h5>
+                <p class="small text-muted">
+                  Membangun tata kelola pemerintahan yang baik, bersih, dan bertanggung jawab
+                </p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="visi-misi-card d-flex align-items-center gap-3">
+                <div class="vm-icon-sm bg-success flex-shrink-0">
+                  <i class="bi bi-award text-white fs-5"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Penghargaan Terbaru</h6>
+                  <p class="small text-muted mb-0">Kabupaten terbaik dalam pelayanan publik tingkat Jawa Tengah 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LAYANAN SECTION ===== -->
+  <section id="layanan" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="section-badge mb-3">Layanan Publik</div>
+        <h2 class="section-title">Layanan Masyarakat</h2>
+        <p class="section-subtitle">
+          Akses berbagai layanan pemerintahan Kabupaten Grobogan secara mudah dan cepat
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Pengaduan Masyarakat -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card service-card-red h-100">
+            <div class="service-icon">
+              <i class="bi bi-chat-square-dots-fill"></i>
+            </div>
+            <h5 class="service-title">Pengaduan Masyarakat</h5>
+            <p class="service-desc">
+              Sampaikan keluhan, masukan, dan aspirasi Anda kepada pemerintah daerah Kabupaten Grobogan secara online.
+            </p>
+            <ul class="service-list">
+              <li><i class="bi bi-check-circle-fill"></i> Pengaduan Online 24 Jam</li>
+              <li><i class="bi bi-check-circle-fill"></i> Tindak Lanjut Terukur</li>
+              <li><i class="bi bi-check-circle-fill"></i> Laporan Transparan</li>
+            </ul>
+            <a href="#pengaduan" class="btn btn-service btn-red mt-auto">
+              <i class="bi bi-arrow-right me-1"></i>Buat Pengaduan
+            </a>
+          </div>
+        </div>
+
+        <!-- Layanan Kependudukan -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card service-card-blue h-100">
+            <div class="service-icon">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h5 class="service-title">Layanan Kependudukan</h5>
+            <p class="service-desc">
+              Urus dokumen kependudukan seperti KTP, KK, akta kelahiran, dan surat keterangan domisili secara online.
+            </p>
+            <ul class="service-list">
+              <li><i class="bi bi-check-circle-fill"></i> Permohonan KTP / KK</li>
+              <li><i class="bi bi-check-circle-fill"></i> Akta Kelahiran &amp; Kematian</li>
+              <li><i class="bi bi-check-circle-fill"></i> Surat Keterangan</li>
+            </ul>
+            <a href="#" class="btn btn-service btn-blue mt-auto">
+              <i class="bi bi-arrow-right me-1"></i>Akses Layanan
+            </a>
+          </div>
+        </div>
+
+        <!-- Layanan Kesehatan -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card service-card-green h-100">
+            <div class="service-icon">
+              <i class="bi bi-heart-pulse-fill"></i>
+            </div>
+            <h5 class="service-title">Layanan Kesehatan</h5>
+            <p class="service-desc">
+              Informasi fasilitas kesehatan, pendaftaran online Puskesmas, dan program kesehatan masyarakat Grobogan.
+            </p>
+            <ul class="service-list">
+              <li><i class="bi bi-check-circle-fill"></i> Daftar Online Puskesmas</li>
+              <li><i class="bi bi-check-circle-fill"></i> Info Rumah Sakit</li>
+              <li><i class="bi bi-check-circle-fill"></i> Program JKD</li>
+            </ul>
+            <a href="#" class="btn btn-service btn-green mt-auto">
+              <i class="bi bi-arrow-right me-1"></i>Akses Layanan
+            </a>
+          </div>
+        </div>
+
+        <!-- Informasi Kebencanaan -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card service-card-orange h-100">
+            <div class="service-icon">
+              <i class="bi bi-cloud-lightning-rain-fill"></i>
+            </div>
+            <h5 class="service-title">Informasi Kebencanaan</h5>
+            <p class="service-desc">
+              Pantau informasi terkini bencana alam, peringatan dini, dan prosedur evakuasi di wilayah Kabupaten Grobogan.
+            </p>
+            <ul class="service-list">
+              <li><i class="bi bi-check-circle-fill"></i> Peringatan Dini Bencana</li>
+              <li><i class="bi bi-check-circle-fill"></i> Peta Rawan Bencana</li>
+              <li><i class="bi bi-check-circle-fill"></i> Prosedur Evakuasi</li>
+            </ul>
+            <a href="#" class="btn btn-service btn-orange mt-auto">
+              <i class="bi bi-arrow-right me-1"></i>Lihat Info
+            </a>
+          </div>
+        </div>
+
+        <!-- Informasi Pariwisata -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card service-card-purple h-100">
+            <div class="service-icon">
+              <i class="bi bi-camera-fill"></i>
+            </div>
+            <h5 class="service-title">Informasi Pariwisata</h5>
+            <p class="service-desc">
+              Temukan destinasi wisata unggulan Grobogan seperti Bledug Kuwu, Waduk Kedung Ombo, dan Bukit Cinta.
+            </p>
+            <ul class="service-list">
+              <li><i class="bi bi-check-circle-fill"></i> Peta Wisata Grobogan</li>
+              <li><i class="bi bi-check-circle-fill"></i> Paket Wisata</li>
+              <li><i class="bi bi-check-circle-fill"></i> Kuliner Khas Daerah</li>
+            </ul>
+            <a href="#" class="btn btn-service btn-purple mt-auto">
+              <i class="bi bi-arrow-right me-1"></i>Jelajahi Wisata
+            </a>
+          </div>
+        </div>
+
+        <!-- Transparansi Anggaran -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card service-card-teal h-100">
+            <div class="service-icon">
+              <i class="bi bi-bar-chart-fill"></i>
+            </div>
+            <h5 class="service-title">Transparansi Anggaran</h5>
+            <p class="service-desc">
+              Akses informasi anggaran dan realisasi belanja daerah Kabupaten Grobogan secara transparan dan akuntabel.
+            </p>
+            <ul class="service-list">
+              <li><i class="bi bi-check-circle-fill"></i> APBD Kabupaten</li>
+              <li><i class="bi bi-check-circle-fill"></i> Laporan Realisasi</li>
+              <li><i class="bi bi-check-circle-fill"></i> Dokumen Publik</li>
+            </ul>
+            <a href="#" class="btn btn-service btn-teal mt-auto">
+              <i class="bi bi-arrow-right me-1"></i>Lihat Anggaran
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PENGUMUMAN PENTING ===== -->
+  <section class="announcement-section py-5">
+    <div class="container">
+      <div class="announcement-box">
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+          <div class="announcement-badge">
+            <i class="bi bi-megaphone-fill me-1"></i>Pengumuman
+          </div>
+          <div class="announcement-ticker">
+            <marquee behavior="scroll" direction="left" scrollamount="4">
+              📢 Pelayanan KTP dan KK di Disdukcapil buka Senin–Jumat pukul 08.00–15.00 WIB &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 🏥 Vaksinasi Gratis di seluruh Puskesmas Kabupaten Grobogan &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 🚧 Perbaikan jalan ruas Purwodadi–Wirosari mulai 15 April 2025 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 📋 Pendaftaran CPNS Pemkab Grobogan 2025 segera dibuka
+            </marquee>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BERITA DAN INFORMASI ===== -->
+  <section id="berita" class="section-padding bg-light">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-5">
+        <div>
+          <div class="section-badge mb-3">Terkini</div>
+          <h2 class="section-title mb-2">Berita &amp; Informasi</h2>
+          <p class="text-muted">Update terbaru kegiatan dan program pemerintah Kabupaten Grobogan</p>
+        </div>
+        <a href="#" class="btn btn-outline-primary d-none d-md-inline-flex align-items-center gap-2">
+          <i class="bi bi-grid"></i>Semua Berita
+        </a>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Berita Utama -->
+        <div class="col-lg-6">
+          <div class="news-card-main h-100">
+            <div class="news-img-main">
+              <div class="news-img-placeholder">
+                <i class="bi bi-image fs-1 text-white opacity-50"></i>
+              </div>
+              <div class="news-category-badge">Pemerintahan</div>
+              <div class="news-date-badge"><i class="bi bi-calendar3 me-1"></i>8 April 2025</div>
+            </div>
+            <div class="news-content-main">
+              <h4 class="news-title-main">Bupati Grobogan Resmikan Program Beasiswa Pendidikan untuk 500 Siswa Berprestasi</h4>
+              <p class="news-excerpt">
+                Pemerintah Kabupaten Grobogan melalui Dinas Pendidikan resmi meluncurkan program beasiswa pendidikan bagi 500 siswa berprestasi dari keluarga kurang mampu di seluruh wilayah Grobogan.
+              </p>
+              <div class="d-flex align-items-center justify-content-between mt-3">
+                <span class="news-author"><i class="bi bi-person-circle me-1"></i>Diskominfo Grobogan</span>
+                <a href="#" class="btn btn-sm btn-primary">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Berita Kecil -->
+        <div class="col-lg-6">
+          <div class="d-flex flex-column gap-3 h-100">
+
+            <div class="news-card-sm">
+              <div class="news-img-sm">
+                <div class="news-img-placeholder-sm"></div>
+              </div>
+              <div class="news-content-sm">
+                <div class="news-meta">
+                  <span class="badge bg-success-subtle text-success">Kesehatan</span>
+                  <span class="news-date-sm"><i class="bi bi-calendar3 me-1"></i>7 April 2025</span>
+                </div>
+                <h6 class="news-title-sm">Puskesmas Grobogan Raih Akreditasi Paripurna dari Kemenkes RI</h6>
+                <a href="#" class="news-link">Baca <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="news-card-sm">
+              <div class="news-img-sm">
+                <div class="news-img-placeholder-sm"></div>
+              </div>
+              <div class="news-content-sm">
+                <div class="news-meta">
+                  <span class="badge bg-warning-subtle text-warning">Infrastruktur</span>
+                  <span class="news-date-sm"><i class="bi bi-calendar3 me-1"></i>6 April 2025</span>
+                </div>
+                <h6 class="news-title-sm">Pembangunan Jalan Desa Tahap II Senilai Rp 12 Miliar Dimulai</h6>
+                <a href="#" class="news-link">Baca <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="news-card-sm">
+              <div class="news-img-sm">
+                <div class="news-img-placeholder-sm"></div>
+              </div>
+              <div class="news-content-sm">
+                <div class="news-meta">
+                  <span class="badge bg-info-subtle text-info">Pariwisata</span>
+                  <span class="news-date-sm"><i class="bi bi-calendar3 me-1"></i>5 April 2025</span>
+                </div>
+                <h6 class="news-title-sm">Festival Budaya Grobogan 2025 Menarik 50.000 Pengunjung</h6>
+                <a href="#" class="news-link">Baca <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="news-card-sm">
+              <div class="news-img-sm">
+                <div class="news-img-placeholder-sm"></div>
+              </div>
+              <div class="news-content-sm">
+                <div class="news-meta">
+                  <span class="badge bg-danger-subtle text-danger">Pertanian</span>
+                  <span class="news-date-sm"><i class="bi bi-calendar3 me-1"></i>4 April 2025</span>
+                </div>
+                <h6 class="news-title-sm">Pemkab Grobogan Bantu Petani dengan Bantuan Pupuk Bersubsidi</h6>
+                <a href="#" class="news-link">Baca <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Pengumuman Resmi -->
+      <div class="mt-5">
+        <h4 class="fw-bold mb-4"><i class="bi bi-pin-angle-fill text-danger me-2"></i>Pengumuman Resmi</h4>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="announcement-card">
+              <div class="ann-icon bg-primary-subtle">
+                <i class="bi bi-file-earmark-text-fill text-primary fs-4"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Pengumuman CPNS 2025</h6>
+                <p class="small text-muted mb-1">Pendaftaran CPNS Pemerintah Kabupaten Grobogan Formasi 2025</p>
+                <span class="small text-primary"><i class="bi bi-calendar3 me-1"></i>1 April 2025</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="announcement-card">
+              <div class="ann-icon bg-success-subtle">
+                <i class="bi bi-megaphone-fill text-success fs-4"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Jadwal Pelayanan Lebaran</h6>
+                <p class="small text-muted mb-1">Penyesuaian jam pelayanan publik selama Hari Raya Idul Fitri</p>
+                <span class="small text-primary"><i class="bi bi-calendar3 me-1"></i>28 Maret 2025</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="announcement-card">
+              <div class="ann-icon bg-warning-subtle">
+                <i class="bi bi-exclamation-triangle-fill text-warning fs-4"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">Status Siaga Bencana</h6>
+                <p class="small text-muted mb-1">Waspada banjir di beberapa wilayah kecamatan, pantau informasi BPBD</p>
+                <span class="small text-primary"><i class="bi bi-calendar3 me-1"></i>25 Maret 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4 d-md-none">
+        <a href="#" class="btn btn-outline-primary w-100">
+          <i class="bi bi-grid me-2"></i>Semua Berita
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PENGADUAN SECTION ===== -->
+  <section id="pengaduan" class="section-padding">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-5">
+          <div class="section-badge mb-3">Sampaikan Aspirasi</div>
+          <h2 class="section-title">Pengaduan Masyarakat</h2>
+          <p class="text-muted mb-4">
+            Kami mendengar suara Anda. Sampaikan keluhan, masukan, dan aspirasi Anda kepada Pemerintah Kabupaten Grobogan. Setiap pengaduan akan ditindaklanjuti oleh petugas kami.
+          </p>
+          <div class="d-flex flex-column gap-3">
+            <div class="contact-info-item">
+              <div class="ci-icon bg-primary-subtle">
+                <i class="bi bi-telephone-fill text-primary"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0">Hotline Pengaduan</h6>
+                <p class="text-muted mb-0">(0292) 421 001</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon bg-success-subtle">
+                <i class="bi bi-envelope-fill text-success"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0">Email Pengaduan</h6>
+                <p class="text-muted mb-0">pengaduan@grobogankab.go.id</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="ci-icon bg-warning-subtle">
+                <i class="bi bi-whatsapp text-success"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0">WhatsApp</h6>
+                <p class="text-muted mb-0">0812-2345-6789 (Jam Kerja)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="complaint-form-card">
+            <h5 class="fw-bold mb-4"><i class="bi bi-pencil-square text-primary me-2"></i>Form Pengaduan Online</h5>
+            <form id="complaintForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Nama Lengkap <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" placeholder="Masukkan nama lengkap Anda" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Nomor NIK <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" placeholder="16 digit NIK" maxlength="16" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Nomor HP / WA <span class="text-danger">*</span></label>
+                  <input type="tel" class="form-control" placeholder="Contoh: 0812xxxx" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label fw-semibold">Email</label>
+                  <input type="email" class="form-control" placeholder="email@contoh.com" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Kategori Pengaduan <span class="text-danger">*</span></label>
+                  <select class="form-select" required>
+                    <option value="" selected disabled>Pilih kategori...</option>
+                    <option>Infrastruktur &amp; Jalan</option>
+                    <option>Kesehatan</option>
+                    <option>Pendidikan</option>
+                    <option>Kependudukan</option>
+                    <option>Lingkungan Hidup</option>
+                    <option>Keamanan &amp; Ketertiban</option>
+                    <option>Pelayanan Publik</option>
+                    <option>Lainnya</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Judul Pengaduan <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" placeholder="Tuliskan judul singkat pengaduan Anda" required />
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Isi Pengaduan <span class="text-danger">*</span></label>
+                  <textarea class="form-control" rows="5" placeholder="Jelaskan pengaduan Anda secara lengkap dan detail..." required></textarea>
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-semibold">Lampiran (opsional)</label>
+                  <input type="file" class="form-control" accept=".jpg,.jpeg,.png,.pdf" />
+                  <div class="form-text">Format: JPG, PNG, PDF. Maks 5 MB</div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="privacyCheck" required />
+                    <label class="form-check-label small" for="privacyCheck">
+                      Saya menyetujui bahwa data yang saya sampaikan akan diproses sesuai kebijakan privasi pemerintah daerah.
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary w-100 btn-lg fw-semibold">
+                    <i class="bi bi-send-fill me-2"></i>Kirim Pengaduan
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERI PARIWISATA ===== -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="section-badge mb-3">Wisata &amp; Budaya</div>
+        <h2 class="section-title">Destinasi Wisata Grobogan</h2>
+        <p class="section-subtitle">Jelajahi keindahan alam dan kekayaan budaya Kabupaten Grobogan</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="tourism-card">
+            <div class="tourism-img tourism-img-1">
+              <div class="tourism-overlay">
+                <h5 class="text-white fw-bold">Bledug Kuwu</h5>
+                <p class="small text-white-50">Fenomena alam unik lumpur purba</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="tourism-card">
+            <div class="tourism-img tourism-img-2">
+              <div class="tourism-overlay">
+                <h5 class="text-white fw-bold">Waduk Kedung Ombo</h5>
+                <p class="small text-white-50">Wisata air terluas di Jawa Tengah</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="tourism-card">
+            <div class="tourism-img tourism-img-3">
+              <div class="tourism-overlay">
+                <h5 class="text-white fw-bold">Bukit Cinta</h5>
+                <p class="small text-white-50">Panorama alam yang memukau</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" class="footer-section">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row g-4">
+
+          <!-- Brand & About -->
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <div class="footer-logo-circle">
+                <i class="bi bi-shield-fill fs-3"></i>
+              </div>
+              <div>
+                <h5 class="text-white fw-bold mb-0">Kab. Grobogan</h5>
+                <small class="text-white-50">Pemerintah Kabupaten Grobogan</small>
+              </div>
+            </div>
+            <p class="text-white-50 mb-4">
+              Website resmi Pemerintah Kabupaten Grobogan. Hadir untuk memberikan informasi dan layanan publik terbaik kepada seluruh masyarakat Grobogan.
+            </p>
+            <div class="d-flex gap-2">
+              <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+              <a href="#" class="social-btn"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+
+          <!-- Layanan -->
+          <div class="col-md-4 col-lg-2">
+            <h6 class="footer-heading">Layanan</h6>
+            <ul class="footer-links">
+              <li><a href="#layanan">Pengaduan</a></li>
+              <li><a href="#layanan">Kependudukan</a></li>
+              <li><a href="#layanan">Kesehatan</a></li>
+              <li><a href="#layanan">Kebencanaan</a></li>
+              <li><a href="#layanan">Pariwisata</a></li>
+            </ul>
+          </div>
+
+          <!-- Profil -->
+          <div class="col-md-4 col-lg-2">
+            <h6 class="footer-heading">Tentang</h6>
+            <ul class="footer-links">
+              <li><a href="#profil">Profil Daerah</a></li>
+              <li><a href="#profil">Visi &amp; Misi</a></li>
+              <li><a href="#profil">Pimpinan</a></li>
+              <li><a href="#">Struktur OPD</a></li>
+              <li><a href="#">Dokumen Publik</a></li>
+            </ul>
+          </div>
+
+          <!-- Kontak -->
+          <div class="col-md-4 col-lg-4">
+            <h6 class="footer-heading">Kontak Kami</h6>
+            <div class="d-flex flex-column gap-3">
+              <div class="footer-contact-item">
+                <i class="bi bi-geo-alt-fill text-danger"></i>
+                <span>Jl. Gatot Subroto No. 1, Purwodadi, Kabupaten Grobogan, Jawa Tengah 58111</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-telephone-fill text-primary"></i>
+                <span>(0292) 421 001</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-envelope-fill text-success"></i>
+                <span>info@grobogankab.go.id</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-clock-fill text-warning"></i>
+                <span>Senin – Jumat: 08.00 – 16.00 WIB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <p class="mb-0 text-white-50 small">
+            &copy; 2025 Pemerintah Kabupaten Grobogan. Hak Cipta Dilindungi.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white-50 text-decoration-none small">Kebijakan Privasi</a>
+            <a href="#" class="text-white-50 text-decoration-none small">Syarat &amp; Ketentuan</a>
+            <a href="#" class="text-white-50 text-decoration-none small">Peta Situs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="backToTop" class="btn-back-top" title="Kembali ke Atas">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
