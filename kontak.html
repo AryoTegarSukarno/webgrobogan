@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak - Web Grobogan</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__brand">
+        <span class="navbar__brand-icon">🏛️</span>
+        <span>Web<strong>Grobogan</strong></span>
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="navbar__menu" id="navMenu">
+        <a href="index.html" class="navbar__link">Beranda</a>
+        <a href="wisata.html" class="navbar__link">Wisata</a>
+        <a href="budaya.html" class="navbar__link">Budaya</a>
+        <a href="kuliner.html" class="navbar__link">Kuliner</a>
+        <a href="kontak.html" class="navbar__link active">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Beranda</a> /
+        <span>Kontak</span>
+      </div>
+      <h1 class="page-hero__title">Hubungi Kami</h1>
+      <p class="page-hero__subtitle">Kami siap membantu Anda dengan informasi seputar Kabupaten Grobogan</p>
+    </div>
+  </section>
+
+  <!-- Kontak Section -->
+  <section class="section">
+    <div class="container">
+      <div class="kontak__grid">
+        <!-- Informasi Kontak -->
+        <div class="kontak-info">
+          <h3>Informasi Kontak</h3>
+          <p>Jangan ragu untuk menghubungi kami. Tim kami siap membantu Anda dengan informasi dan layanan seputar Kabupaten Grobogan.</p>
+          <div class="kontak-info__list">
+            <div class="kontak-info__item">
+              <div class="kontak-info__item-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="kontak-info__item-text">
+                <strong>Alamat Kantor</strong>
+                <span>Jl. Ahmad Yani No. 1, Purwodadi, Kabupaten Grobogan, Jawa Tengah 58100</span>
+              </div>
+            </div>
+            <div class="kontak-info__item">
+              <div class="kontak-info__item-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="kontak-info__item-text">
+                <strong>Telepon</strong>
+                <span>(0292) 421110 / (0292) 421025</span>
+              </div>
+            </div>
+            <div class="kontak-info__item">
+              <div class="kontak-info__item-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="kontak-info__item-text">
+                <strong>Email</strong>
+                <span>info@grobogankab.go.id</span>
+              </div>
+            </div>
+            <div class="kontak-info__item">
+              <div class="kontak-info__item-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="kontak-info__item-text">
+                <strong>Jam Operasional</strong>
+                <span>Senin – Jumat: 07.30 – 16.00 WIB</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <h4 style="color: var(--color-primary); margin-bottom: 1rem;">Ikuti Kami</h4>
+            <div class="footer__social" style="justify-content: flex-start;">
+              <a href="#" aria-label="Facebook" style="background: #1877f2; border-color: #1877f2; color: white;"><i class="fab fa-facebook"></i></a>
+              <a href="#" aria-label="Instagram" style="background: #e1306c; border-color: #e1306c; color: white;"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Twitter" style="background: #1da1f2; border-color: #1da1f2; color: white;"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="YouTube" style="background: #ff0000; border-color: #ff0000; color: white;"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Kontak -->
+        <div class="kontak-form">
+          <h3>Kirim Pesan</h3>
+          <div class="alert alert--info">
+            <i class="fas fa-info-circle"></i>
+            Pesan Anda akan direspons dalam 1-2 hari kerja.
+          </div>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nama Lengkap <span style="color: #c62828;">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" />
+              </div>
+              <div class="form-group">
+                <label for="email">Alamat Email <span style="color: #c62828;">*</span></label>
+                <input type="email" id="email" name="email" placeholder="contoh@email.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Nomor Telepon</label>
+              <input type="tel" id="phone" name="phone" placeholder="08xx-xxxx-xxxx" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subjek Pesan</label>
+              <select id="subject" name="subject">
+                <option value="">-- Pilih Subjek --</option>
+                <option value="informasi">Informasi Umum</option>
+                <option value="wisata">Pariwisata</option>
+                <option value="budaya">Budaya &amp; Seni</option>
+                <option value="layanan">Layanan Publik</option>
+                <option value="pengaduan">Pengaduan</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Pesan <span style="color: #c62828;">*</span></label>
+              <textarea id="message" name="message" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">
+              <i class="fas fa-paper-plane"></i>
+              Kirim Pesan
+            </button>
+          </form>
+          <div id="formSuccess" class="form-success">
+            <i class="fas fa-check-circle" style="color: var(--color-primary);"></i>
+            <h4>Pesan Terkirim!</h4>
+            <p>Terima kasih telah menghubungi kami. Kami akan segera merespons pesan Anda.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lokasi -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Lokasi Kami</h2>
+        <p class="section__subtitle">Kantor Pemerintah Kabupaten Grobogan</p>
+      </div>
+      <div class="image-placeholder" style="border-radius: var(--radius); max-width: 100%; height: 350px; background: linear-gradient(135deg, #e8f5e9, #c8e6c9);">
+        <i class="fas fa-map" style="font-size: 4rem; color: var(--color-primary);"></i>
+        <p style="font-size: 1.2rem; font-weight: 700; color: var(--color-primary);">Peta Lokasi</p>
+        <small style="color: var(--color-text-light);">Jl. Ahmad Yani No. 1, Purwodadi, Grobogan, Jawa Tengah</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Pertanyaan Umum</h2>
+        <p class="section__subtitle">Jawaban atas pertanyaan yang sering diajukan</p>
+      </div>
+      <div class="budaya__grid">
+        <div class="budaya-item">
+          <div class="budaya-item__icon"><i class="fas fa-question"></i></div>
+          <div class="budaya-item__content">
+            <h4>Bagaimana cara mengurus KTP di Grobogan?</h4>
+            <p>Pengurusan KTP dapat dilakukan di Dinas Kependudukan dan Pencatatan Sipil Kabupaten Grobogan. Bawa dokumen persyaratan seperti fotokopi KK dan surat pengantar RT/RW.</p>
+          </div>
+        </div>
+        <div class="budaya-item">
+          <div class="budaya-item__icon"><i class="fas fa-question"></i></div>
+          <div class="budaya-item__content">
+            <h4>Apa saja objek wisata unggulan Grobogan?</h4>
+            <p>Objek wisata unggulan antara lain Api Abadi Mrapen, Bledug Kuwu, dan Waduk Kedung Ombo. Ketiga destinasi ini menawarkan pengalaman wisata alam yang unik dan menarik.</p>
+          </div>
+        </div>
+        <div class="budaya-item">
+          <div class="budaya-item__icon"><i class="fas fa-question"></i></div>
+          <div class="budaya-item__content">
+            <h4>Di mana bisa mencicipi kuliner khas Grobogan?</h4>
+            <p>Kuliner khas Grobogan dapat ditemukan di Pasar Purwodadi, kawasan alun-alun kota, dan berbagai warung makan tradisional yang tersebar di seluruh kecamatan.</p>
+          </div>
+        </div>
+        <div class="budaya-item">
+          <div class="budaya-item__icon"><i class="fas fa-question"></i></div>
+          <div class="budaya-item__content">
+            <h4>Bagaimana cara mengajukan pengaduan masyarakat?</h4>
+            <p>Pengaduan dapat disampaikan melalui layanan LAPOR! (Layanan Aspirasi dan Pengaduan Online Rakyat), email resmi, atau datang langsung ke kantor pemerintahan terdekat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>🏛️ WebGrobogan</h3>
+          <p>Portal resmi informasi Kabupaten Grobogan, Jawa Tengah, Indonesia. Berkomitmen memberikan informasi terkini dan pelayanan terbaik bagi masyarakat.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <h4>Menu Utama</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="wisata.html">Wisata</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="kuliner.html">Kuliner</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="#">Kependudukan</a></li>
+            <li><a href="#">Perizinan</a></li>
+            <li><a href="#">Kesehatan</a></li>
+            <li><a href="#">Pendidikan</a></li>
+            <li><a href="#">Pengaduan</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Kontak Kami</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Jl. A. Yani No. 1, Purwodadi, Grobogan, Jawa Tengah 58100</p>
+          <p><i class="fas fa-phone"></i> (0292) 421110</p>
+          <p><i class="fas fa-envelope"></i> info@grobogankab.go.id</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Kabupaten Grobogan. Dibuat untuk Tugas Besar Aplikasi Berbasis Platform.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

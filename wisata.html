@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wisata - Web Grobogan</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__brand">
+        <span class="navbar__brand-icon">🏛️</span>
+        <span>Web<strong>Grobogan</strong></span>
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="navbar__menu" id="navMenu">
+        <a href="index.html" class="navbar__link">Beranda</a>
+        <a href="wisata.html" class="navbar__link active">Wisata</a>
+        <a href="budaya.html" class="navbar__link">Budaya</a>
+        <a href="kuliner.html" class="navbar__link">Kuliner</a>
+        <a href="kontak.html" class="navbar__link">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Beranda</a> /
+        <span>Wisata</span>
+      </div>
+      <h1 class="page-hero__title">Destinasi Wisata</h1>
+      <p class="page-hero__subtitle">Jelajahi keindahan alam dan budaya Kabupaten Grobogan</p>
+    </div>
+  </section>
+
+  <!-- Wisata Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Semua Destinasi Wisata</h2>
+        <p class="section__subtitle">Temukan berbagai pilihan wisata menarik di Grobogan</p>
+      </div>
+
+      <div class="wisata-grid">
+        <!-- Wisata 1 -->
+        <div class="wisata-card">
+          <div class="wisata-card__img wisata-card__img--1">
+            🔥
+            <span class="wisata-card__tag">Fenomena Alam</span>
+          </div>
+          <div class="wisata-card__body">
+            <h3>Api Abadi Mrapen</h3>
+            <p>Fenomena api abadi yang keluar dari celah bumi dan tidak pernah padam sejak ratusan tahun. Secara historis api ini digunakan sebagai sumber api Pekan Olahraga Nasional (PON).</p>
+            <div class="wisata-card__footer">
+              <span><i class="fas fa-map-marker-alt"></i> Kec. Godong</span>
+              <span><i class="fas fa-clock"></i> 08.00–17.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wisata 2 -->
+        <div class="wisata-card">
+          <div class="wisata-card__img wisata-card__img--2">
+            💧
+            <span class="wisata-card__tag">Fenomena Alam</span>
+          </div>
+          <div class="wisata-card__body">
+            <h3>Bledug Kuwu</h3>
+            <p>Kawah lumpur unik yang menyemburkan lumpur bercampur gas alam secara periodik. Fenomena geologi yang langka ini menjadi daya tarik ilmiah dan wisata alam yang menarik.</p>
+            <div class="wisata-card__footer">
+              <span><i class="fas fa-map-marker-alt"></i> Kec. Kradenan</span>
+              <span><i class="fas fa-clock"></i> 07.00–17.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wisata 3 -->
+        <div class="wisata-card">
+          <div class="wisata-card__img wisata-card__img--3">
+            🌊
+            <span class="wisata-card__tag">Wisata Air</span>
+          </div>
+          <div class="wisata-card__body">
+            <h3>Waduk Kedung Ombo</h3>
+            <p>Waduk terbesar di Jawa Tengah yang membentang di tiga kabupaten. Menawarkan aktivitas memancing, berperahu, dan menikmati keindahan alam dengan suasana tenang dan asri.</p>
+            <div class="wisata-card__footer">
+              <span><i class="fas fa-map-marker-alt"></i> Kec. Geyer</span>
+              <span><i class="fas fa-clock"></i> 06.00–18.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wisata 4 -->
+        <div class="wisata-card">
+          <div class="wisata-card__img wisata-card__img--4">
+            🕌
+            <span class="wisata-card__tag">Wisata Sejarah</span>
+          </div>
+          <div class="wisata-card__body">
+            <h3>Masjid Agung Purwodadi</h3>
+            <p>Masjid bersejarah yang menjadi pusat kegiatan keagamaan di Kabupaten Grobogan. Arsitektur megah dan nilai sejarahnya menjadikannya destinasi wisata religi yang penting.</p>
+            <div class="wisata-card__footer">
+              <span><i class="fas fa-map-marker-alt"></i> Purwodadi</span>
+              <span><i class="fas fa-clock"></i> 24 Jam</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wisata 5 -->
+        <div class="wisata-card">
+          <div class="wisata-card__img wisata-card__img--5">
+            🌿
+            <span class="wisata-card__tag">Wisata Alam</span>
+          </div>
+          <div class="wisata-card__body">
+            <h3>Kebun Wisata Bringin</h3>
+            <p>Kawasan wisata alam dengan hutan pohon bringin berusia ratusan tahun. Cocok untuk kegiatan family gathering, outbound, dan menikmati kesejukan alam pedesaan Grobogan.</p>
+            <div class="wisata-card__footer">
+              <span><i class="fas fa-map-marker-alt"></i> Kec. Bringin</span>
+              <span><i class="fas fa-clock"></i> 08.00–17.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wisata 6 -->
+        <div class="wisata-card">
+          <div class="wisata-card__img wisata-card__img--6">
+            🌾
+            <span class="wisata-card__tag">Wisata Pertanian</span>
+          </div>
+          <div class="wisata-card__body">
+            <h3>Agrowisata Jagung</h3>
+            <p>Wisata edukatif di tengah ladang jagung yang luas, khas Grobogan sebagai sentra pertanian jagung terbesar di Jawa Tengah. Pengunjung dapat belajar bertani dan memetik jagung.</p>
+            <div class="wisata-card__footer">
+              <span><i class="fas fa-map-marker-alt"></i> Kec. Wirosari</span>
+              <span><i class="fas fa-clock"></i> 07.00–17.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tips Wisata -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Tips Berwisata ke Grobogan</h2>
+        <p class="section__subtitle">Persiapkan perjalanan Anda dengan baik</p>
+      </div>
+      <div class="budaya__grid">
+        <div class="budaya-item">
+          <div class="budaya-item__icon"><i class="fas fa-sun"></i></div>
+          <div class="budaya-item__content">
+            <h4>Waktu Terbaik</h4>
+            <p>Kunjungi Grobogan pada musim kemarau (April–Oktober) untuk menikmati wisata alam dengan kondisi cuaca yang lebih cerah dan jalan yang lebih mudah dilalui.</p>
+          </div>
+        </div>
+        <div class="budaya-item">
+          <div class="budaya-item__icon"><i class="fas fa-car"></i></div>
+          <div class="budaya-item__content">
+            <h4>Transportasi</h4>
+            <p>Grobogan mudah dijangkau dari Semarang (±50 km) via jalur Demak atau dari Solo (±80 km) via Purwodadi. Tersedia pula angkutan umum dari terminal Purwodadi.</p>
+          </div>
+        </div>
+        <div class="budaya-item">
+          <div class="budaya-item__icon"><i class="fas fa-hotel"></i></div>
+          <div class="budaya-item__content">
+            <h4>Penginapan</h4>
+            <p>Berbagai pilihan penginapan tersedia di Purwodadi, mulai dari hotel bintang hingga guest house dengan harga terjangkau dan fasilitas yang nyaman.</p>
+          </div>
+        </div>
+        <div class="budaya-item">
+          <div class="budaya-item__icon"><i class="fas fa-camera"></i></div>
+          <div class="budaya-item__content">
+            <h4>Dokumentasi</h4>
+            <p>Jangan lupa membawa kamera untuk mengabadikan keindahan alam dan budaya Grobogan. Banyak spot foto menarik yang sayang untuk dilewatkan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>🏛️ WebGrobogan</h3>
+          <p>Portal resmi informasi Kabupaten Grobogan, Jawa Tengah, Indonesia. Berkomitmen memberikan informasi terkini dan pelayanan terbaik bagi masyarakat.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <h4>Menu Utama</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="wisata.html">Wisata</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="kuliner.html">Kuliner</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="#">Kependudukan</a></li>
+            <li><a href="#">Perizinan</a></li>
+            <li><a href="#">Kesehatan</a></li>
+            <li><a href="#">Pendidikan</a></li>
+            <li><a href="#">Pengaduan</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4>Kontak Kami</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Jl. A. Yani No. 1, Purwodadi, Grobogan, Jawa Tengah 58100</p>
+          <p><i class="fas fa-phone"></i> (0292) 421110</p>
+          <p><i class="fas fa-envelope"></i> info@grobogankab.go.id</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Kabupaten Grobogan. Dibuat untuk Tugas Besar Aplikasi Berbasis Platform.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
