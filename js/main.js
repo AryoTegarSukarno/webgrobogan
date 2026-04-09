@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const fadeObserver = new IntersectionObserver(entries => {
-    entries.forEach((entry, i) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         setTimeout(() => {
           entry.target.style.opacity = '1';
