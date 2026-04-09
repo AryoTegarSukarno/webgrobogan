@@ -1,3 +1,5 @@
+from urllib.parse import urlsplit
+
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session
 from flask_login import login_user, logout_user, login_required, current_user
 from ..services import supabase_service as svc
@@ -24,7 +26,10 @@ def login():
             login_user(user, remember=True)
             flash("Selamat datang kembali!", "success")
             next_page = request.args.get("next")
-            return redirect(next_page or url_for("admin.dashboard"))
+            # Validate next_page to prevent open redirect
+            if next_page and urlsplit(next_page).netloc == "":
+                return redirect(next_page)
+            return redirect(url_for("admin.dashboard"))
         else:
             flash("Email atau password salah, atau layanan tidak tersedia.", "danger")
     return render_template("admin/login.html", form=form)
